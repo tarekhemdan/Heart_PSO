@@ -1,0 +1,340 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <title>Orange Report</title>
+
+    <style>
+    html, body, table {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        margin:0px;
+        padding:0;
+        border:0 none;
+    }
+
+    h1, h2 , h3, h4, h5 {
+       padding: 1px;
+       font-size:100%;
+    }
+
+    h1 {
+        color: white;
+        background-color: black;
+        padding: 4px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        border-bottom: 1px solid black;
+        padding-left: 2px;
+    }
+
+    ul, table, p {
+        padding: 10px;
+    }
+
+    table {
+        margin-left: -6px;
+    }
+
+    span.timestamp {
+        position: absolute;
+        right: 40px;
+        color:#ddd;
+    }
+
+    div.selected, div.normal {
+        margin: 5px;
+    }
+
+    div.selected {
+        background: #ddd;
+    }
+    @media print{
+        div.selected {
+            background: inherit;
+        }
+        ::-webkit-input-placeholder {
+            color: transparent;
+        }
+    }
+
+    div.content {
+        margin-left: 15px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 2px 6px 2px 6px;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    @media screen {
+        td, th {
+            white-space: nowrap;
+        }
+    }
+
+    .caption {
+        text-align: center;
+        font-size: 90%;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        max-height: 20cm;
+    }
+
+    span.legend-square {
+        width: 1em;
+        height: 1em;
+        margin-right: 6px;
+        display: inline-block;
+    }
+
+    span.legend-item {
+        margin-right: 24px;
+    }
+
+    textarea {
+        border: 1px solid silver;
+        font-style: italic;
+        width: 100%;
+        height: 4em;
+    }
+
+    .textwrapper {
+        padding: 15px;
+    }
+
+    div.normal textarea:invalid {
+        display: none;
+    }
+
+    div.selected textarea {
+        display: block;
+    }
+
+    @media print{
+        section.section, img {
+            page-break-inside: avoid;
+        }
+    }
+    </style>
+    <script>
+    function scrollToId(id) {
+        var sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.scrollIntoView();
+            return true;
+        }
+        return false;
+    };
+
+    function setSelectedId(id) {
+        var sel_el = document.getElementsByClassName('selected')[0];
+        if (sel_el != undefined && sel_el.id != id) {
+           sel_el.className = 'normal';
+        }
+        sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.className = 'selected';
+            return true;
+        }
+        return false;
+    };
+    </script>
+
+</head><body onload="(function (id) {     setSelectedId(id); scrollToId(id); }(&quot;2543701019664&quot;));">
+
+ 
+
+<div id="2543701019664" class="selected" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Correlations <span class="timestamp">Tue Nov 21 23, 04:51:08</span></h1><div class="content">
+<h2>Pearson correlation</h2><table>
+<tbody><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">1</th>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">-0.578</td>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">oldpeak</td>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">slp</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">2</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.399</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">age</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thalachh</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">3</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.387</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">slp</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thalachh</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">4</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.344</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">oldpeak</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thalachh</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">5</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.296</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">cp</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thalachh</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">6</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.279</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">age</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">trtbps</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">7</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.276</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">age</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">caa</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">8</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.223</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">caa</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">oldpeak</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">9</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.214</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">age</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">chol</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">10</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.213</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">caa</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thalachh</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">11</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.210</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">oldpeak</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thall</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">12</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.210</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">age</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">oldpeak</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">13</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.193</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">oldpeak</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">trtbps</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">14</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.181</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">caa</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">cp</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">15</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.169</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">age</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">slp</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">16</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.162</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">cp</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thall</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">17</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.152</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">caa</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thall</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">18</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.151</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">chol</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">restecg</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">19</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.149</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">cp</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">oldpeak</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">20</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.123</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">chol</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">trtbps</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">21</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.121</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">slp</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">trtbps</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">22</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.120</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">cp</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">slp</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">23</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.116</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">age</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">restecg</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">24</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.114</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">restecg</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">trtbps</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">25</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.105</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">slp</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thall</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">26</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.101</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">caa</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">trtbps</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">27</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.099</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">chol</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thall</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">28</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.096</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thalachh</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thall</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">29</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.093</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">restecg</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">slp</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">30</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.080</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">caa</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">slp</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">31</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.077</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">chol</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">cp</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">32</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.072</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">caa</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">restecg</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">33</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.071</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">caa</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">chol</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">34</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.069</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">age</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">cp</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">35</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.068</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">age</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thall</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">36</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.062</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thall</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">trtbps</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">37</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.059</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">oldpeak</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">restecg</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">38</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.054</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">chol</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">oldpeak</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">39</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.048</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">cp</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">trtbps</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">40</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.047</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thalachh</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">trtbps</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">41</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.044</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">cp</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">restecg</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">42</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.044</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">restecg</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thalachh</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">43</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.012</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">restecg</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thall</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">44</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.010</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">chol</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">thalachh</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">45</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.004</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">chol</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">slp</td>
+</tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);"></textarea></div></div></body></html>
